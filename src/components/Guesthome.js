@@ -1,11 +1,12 @@
-import React from 'react'
-import Herosection from './Herosection'
-
+import React, { Fragment } from 'react'
+import Slider from './Slider'
+import Wrapper from './Wrapper'
 const Guesthome = () => {
   return (
-    <>
-    <Herosection />
-    </>
+    <Fragment>
+      <Slider />
+      <Wrapper />
+    </Fragment>
   )
 }
 
