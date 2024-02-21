@@ -1,13 +1,67 @@
 import { Link } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
+import { useState } from "react";
 export default function Login() {
+  const [errors, setErrors] = useState({});
+  const [FormData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...FormData, [name]: value });
+    setErrors({ ...errors, [name]: validateField(name, value) });
+  };
+
+  const validateField = (filedName, value) => {
+    const password_regx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    const email_regx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let error = "";
+
+    if (filedName === "email") {
+      if (!value.trim()) error = "Email cannot be empty";
+      else if (!email_regx.test(value)) error = "Invalid email format";
+    } else if (filedName === "password") {
+      if (!value.trim()) error = "Password is required";
+      else if (!password_regx.test(value))
+        error =
+          "Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long";
+    }
+    return error;
+  };
+
+  const validate = () => {
+    let isValid = true;
+    for (const key in FormData) {
+      const fieldError = validateField(key, FormData[key]);
+      setErrors((prevErrors) => ({ ...prevErrors, [key]: fieldError }));
+      if (fieldError) isValid = false;
+    }
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = validate();
+
+    if (isValid) {
+      console.log("Form is valid. Submitting data:", FormData);
+    }
+
+    setFormData({
+      email: "",
+      password: "",
+    });
+  };
+
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm content-center">
           <div className="flex justify-center text-[2rem] items-center text-gray-900 ">
-          <FaShoppingBag className="text-black text-3xl mr-2" />
-          Quick Mart
+            <FaShoppingBag className="text-black text-3xl mr-2" />
+            Quick Mart
           </div>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
@@ -15,7 +69,7 @@ export default function Login() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
@@ -27,11 +81,14 @@ export default function Login() {
                 <input
                   id="email"
                   name="email"
+                  onChange={handleChange}
                   type="email"
                   autoComplete="email"
-                  required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                {errors.email && (
+                  <p className="text-sm text-red-800">{errors.email}</p>
+                )}
               </div>
             </div>
 
@@ -58,9 +115,12 @@ export default function Login() {
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  required
+                  onChange={handleChange}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                {errors.password && (
+                  <p className="text-sm text-red-800">{errors.password}</p>
+                )}
               </div>
             </div>
 

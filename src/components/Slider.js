@@ -11,7 +11,7 @@ const contentStyle = {
 
 const imageStyle = {
   width: "59rem", 
-  height: "34rem", 
+  height: "33rem", 
 };
 
 const Slider = () => (
