@@ -6,6 +6,7 @@ import Login from './components/Login';
 import ForgetPassword from './components/ForgetPassword';
 import Signup from './components/Signup';
 import About from './components/About';
+import Shop from './components/Shop';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/fpass" element={<ForgetPassword />} />
+          <Route exact path="/shop" element={<Shop />} />
         </Routes>
 
       </BrowserRouter>

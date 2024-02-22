@@ -57,6 +57,7 @@ function Navbar() {
                             <Link to="/" className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</Link>
                             <Link to="/contact" className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</Link>
                             <Link to="/about" className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</Link>
+                            <Link to="/shop" className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Shop</Link>
                         </div>
                     </div>
                     <div className="flex items-center gap-6">
