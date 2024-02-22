@@ -122,6 +122,8 @@ const Slider = () => (
       </div>
     </div>
   </Carousel>
+
+  
 );
 
 export default Slider;
