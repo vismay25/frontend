@@ -19,8 +19,8 @@ const Slider = () => (
     <div style={contentStyle}>
       <div className="flex justify-around md:flex-nowrap flex-wrap-reverse">
         <div className="flex flex-col justify-center items-center ">
-          <h2 className="font-extrabold font-ubuntu text-[1.25rem] md:text-[2.35rem] max-w-[90%] lg:max-w-[60%] leading-10 ">
-            50% off for your first shopping
+          <h2 className="font-extrabold font-ubuntu text-[1.25rem] md:text-[2.35rem] max-w-[90%] lg:max-w-[70%] leading-10 ">
+          Score big with our 50% off sale! Don't miss out on these incredible savings – it's the perfect time to treat yourself!"
           </h2>
           <p className="max-w-[90%] lg:max-w-[70%] text-xl font-raleway mt-3 text-justify">
             Enjoy a fantastic 50% discount on your inaugural purchase! Shop now
@@ -39,9 +39,9 @@ const Slider = () => (
     </div>
 
     <div style={contentStyle}>
-      <div className="flex justify-around flex-wrap-reverse">
+      <div className="flex justify-around md:flex-nowrap flex-wrap-reverse">
         <div className="flex flex-col justify-center items-center ">  
-        <h2 className="font-extrabold text-3xl max-w-[90%] lg:max-w-[60%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-10">Discover unbeatable deals and fill your cart with joy!</h2>
+        <h2 className="font-extrabold text-3xl max-w-[90%] lg:max-w-[70%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-10">Discover unbeatable deals and fill your cart with joy!</h2>
         <p className="max-w-[90%] lg:max-w-[70%] text-xl font-raleway mt-3 leading-7 text-justify">
             Explore a world of unbeatable bargains and indulge in the joy of saving while you shop 'til you drop!
           </p>
@@ -57,9 +57,9 @@ const Slider = () => (
     </div>
 
     <div style={contentStyle}>
-      <div className="flex justify-around flex-wrap-reverse">
+      <div className="flex justify-around md:flex-nowrap flex-wrap-reverse">
         <div className="flex flex-col justify-center items-center ">
-        <h2 className="font-extrabold max-w-[93%] lg:max-w-[60%] text-[1.5rem] lg:text-[2.35rem] text-justify font-ubuntu leading-10 ">
+        <h2 className="font-extrabold max-w-[93%] lg:max-w-[70%] text-[1.5rem] lg:text-[2.35rem] text-justify font-ubuntu leading-10 ">
             Discover the art of smart shopping and watch your savings grow
             with every purchase!
           </h2>
@@ -79,9 +79,9 @@ const Slider = () => (
     </div>
 
     <div style={contentStyle}>
-      <div className="flex justify-around flex-wrap-reverse">
+      <div className="flex justify-around md:flex-nowrap flex-wrap-reverse">
         <div className="flex flex-col justify-center items-center ">
-        <h2 className="font-extrabold max-w-[90%] lg:max-w-[60%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-7 lg:leading-10">
+        <h2 className="font-extrabold max-w-[90%] lg:max-w-[70%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-7 lg:leading-10">
             Embrace the joy of discovery with every click, and let your style
             shine!
           </h2>
@@ -101,9 +101,9 @@ const Slider = () => (
     </div>
 
     <div style={contentStyle}>
-      <div className="flex justify-around flex-wrap-reverse">
+      <div className="flex justify-around md:flex-nowrap flex-wrap-reverse">
         <div className="flex flex-col justify-center items-center ">
-        <h2 className="font-extrabold max-w-[90%] lg:max-w-[60%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-10">
+        <h2 className="font-extrabold max-w-[90%] lg:max-w-[70%] text-[1.5rem] lg:text-[2.35rem] font-ubuntu leading-10">
             Discover a world of endless possibilities right at your fingertips!
           </h2>
           <p className="max-w-[90%] lg:max-w-[70%] text-xl font-raleway mt-3 leading-7">
@@ -121,8 +121,6 @@ const Slider = () => (
       </div>
     </div>
   </Carousel>
-
-  
 );
 
 export default Slider;
